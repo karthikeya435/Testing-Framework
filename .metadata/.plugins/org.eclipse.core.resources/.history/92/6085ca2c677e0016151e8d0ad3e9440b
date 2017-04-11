@@ -1,0 +1,84 @@
+package PageObjects;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.testng.annotations.Test;
+
+import Factory.Browserfactory;
+import Factory.Dataproviderfactory;
+
+public class Homepage {
+	
+	
+	
+	@FindBy(how = How.XPATH , using="//*[@id='usesrId']") 
+	public WebElement Username;
+	
+	@FindBy(how = How.XPATH , using="//*[@id='password']") 
+	public WebElement pwd;
+	
+	@FindBy(how = How.ID , using="btnSigdnIn") 
+	public WebElement submit;
+	
+	
+	public void enterusername()
+	{
+		Username.clear();
+		String Usrname=Dataproviderfactory.exceldata().getData("Sheet1", 1,1);
+		Username.sendKeys(Usrname);
+		
+	}
+	
+	public void enterpwd()
+	{
+		pwd.clear();
+		String Password=Dataproviderfactory.exceldata().getData("Sheet1", 2,1);
+		pwd.sendKeys(Password);
+	}
+	
+	public void btnsubmit()
+	{
+		submit.click();
+	}
+	public boolean testusername()
+	{
+		boolean d=Browserfactory.isEnabled(Username);
+		if(d==true)
+		{
+			return true;	
+		}
+		else
+		{
+			return false;
+		}
+	}
+	public boolean testpwd()
+	{
+		boolean d=Browserfactory.isEnabled(pwd);
+		if(d==true)
+		{
+			return true;	
+		}
+		else
+		{
+			return false;
+		}
+	}
+	public boolean Signin()
+	{
+		boolean d=Browserfactory.isEnabled(submit);
+		if(d==true)
+		{
+			return true;	
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	
+	
+	
+}

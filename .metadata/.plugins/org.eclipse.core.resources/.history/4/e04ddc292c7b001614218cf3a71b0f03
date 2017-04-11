@@ -1,0 +1,17 @@
+package UnitTest;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import Factory.Browserfactory;
+
+public class TestBrowserfactory 
+{
+@Test
+public static void TestBrowserfact()
+{
+	WebDriver driver=Browserfactory.getBrowser("firefox");
+	Browserfactory.close();
+	
+}
+}

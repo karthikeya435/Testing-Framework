@@ -1,0 +1,11 @@
+package UnitTest;
+
+public class TestDatafactory {
+
+	@Test
+	public static void testdata()
+	{
+		
+	}
+	
+}

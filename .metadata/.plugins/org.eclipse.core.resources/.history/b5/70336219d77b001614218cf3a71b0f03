@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project name="Framework Build">
+
+	<path id="classPath">
+		<pathelement path="./bin" />
+		<pathelement path="./src" />
+		<fileset dir="C:\" includes="**/*.jar" />
+	</path>
+
+	<target name="build">
+		
+		<mkdir dir="bin"/>
+		<javac destdir="bin">
+			<src path="src"/>
+			<classpath refid="classPath" />
+		</javac>
+
+	</target>
+
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+		<classpath refid="classPath" />
+	</taskdef>
+
+	<target name="UnitTestCase" depends="build">
+		
+		<testng outputdir=".\TestCaseReport" classpathref="classPath">
+			
+			<xmlfileset dir=".\Unittest" includes="testng1.xml"/>
+					
+		</testng>
+	</target>
+	
+
+
+</project>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;BrowserFactory&apos; to &apos;Factory&apos;&#x0D;&#x0A;- Original project: &apos;Framework&apos;&#x0D;&#x0A;- Original element: &apos;Framework/src/BrowserFactory&apos;&#x0D;&#x0A;- Renamed element: &apos;Framework/src/Factory&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;BrowserFactory&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;BrowserFactory" name="Factory" qualified="false" references="true" stamp="1473412553130" textual="false" version="1.0"/>
+</session>

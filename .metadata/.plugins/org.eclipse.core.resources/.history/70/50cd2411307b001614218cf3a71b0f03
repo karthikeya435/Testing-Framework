@@ -1,0 +1,15 @@
+package UnitTest;
+
+import org.testng.annotations.Test;
+
+import Factory.Dataproviderfactory;
+
+public class TestDatafactory {
+
+	@Test
+	public static void testdata()
+	{
+		String chrome_path=Dataproviderfactory.configfile().getchromepath();
+	}
+	
+}

@@ -1,0 +1,20 @@
+package UnitTest;
+
+import org.testng.annotations.Test;
+
+import DataProvider.Readexceldata;
+
+public class Testexcel 
+{
+	@Test
+	public void testexcel()
+	{
+		int value;
+		Readexceldata e_data=new Readexceldata();
+		String data_from_sheet=e_data.getData("Sheet1", 0, 100);
+		System.out.println(data_from_sheet);
+		double data_from_sheet1=e_data.getnumData(0, 1, 0);
+		value=(int) data_from_sheet1;
+		System.out.println(value);
+	}
+}

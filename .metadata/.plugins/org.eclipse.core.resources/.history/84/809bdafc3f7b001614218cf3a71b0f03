@@ -1,0 +1,81 @@
+package DataProvider;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import junit.framework.Assert;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.microsoft.schemas.office.visio.x2012.main.CellType;
+
+public class Readexceldata {
+	XSSFWorkbook wb;
+	//public XSSFCell Cell;
+	String value=null;
+	public Readexceldata()
+	{
+		try {
+			File src=new File("C://TestingFramework//Framework//TestData//Testdata.xlsx");
+			FileInputStream fis=new FileInputStream(src);
+			wb=new XSSFWorkbook(fis);
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+
+	}
+
+	@SuppressWarnings("static-access")
+	public String getData(String i , int row , int column)
+	{
+
+		String data = "No file found";
+		XSSFSheet s=wb.getSheet(i);
+		
+		for(int j=0;j<wb.getNumberOfSheets();j++)
+		{
+			if(wb.getSheetName(j).equalsIgnoreCase(i))
+			{
+
+				XSSFRow r=s.getRow(row);
+				XSSFCell Cell=r.getCell(column);
+				
+				
+				if (Cell != null && Cell.getCellType() != Cell.CELL_TYPE_BLANK) {
+					return s.getRow(row).getCell(column).getStringCellValue().toString();
+		        }
+
+				else
+				{
+					return false;
+					
+					
+				}
+
+			}
+		}
+		return data;
+	}
+
+
+
+
+
+	public double getnumData(int sheet , int row , int column)
+	{
+		XSSFSheet s=wb.getSheetAt(sheet);
+		double data_from_sheet1=s.getRow(row).getCell(column).getNumericCellValue();
+		return data_from_sheet1;
+
+	}
+}

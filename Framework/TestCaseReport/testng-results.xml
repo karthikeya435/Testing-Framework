@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="3517" started-at="2016-09-16T07:12:42Z" finished-at="2016-09-16T07:12:45Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="3517" started-at="2016-09-16T07:12:42Z" finished-at="2016-09-16T07:12:45Z">
+      <class name="UnitTest.TestDatafactory">
+        <test-method status="PASS" signature="testdata()[pri:0, instance:UnitTest.TestDatafactory@c7da1e]" name="testdata" duration-ms="2" started-at="2016-09-16T12:42:42Z" finished-at="2016-09-16T12:42:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testdata -->
+        <test-method status="PASS" signature="testiepath()[pri:0, instance:UnitTest.TestDatafactory@c7da1e]" name="testiepath" duration-ms="0" started-at="2016-09-16T12:42:42Z" finished-at="2016-09-16T12:42:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testiepath -->
+      </class> <!-- UnitTest.TestDatafactory -->
+      <class name="UnitTest.Testconfig">
+        <test-method status="PASS" signature="readconfig()[pri:0, instance:UnitTest.Testconfig@1c68925]" name="readconfig" duration-ms="0" started-at="2016-09-16T12:42:45Z" finished-at="2016-09-16T12:42:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readconfig -->
+      </class> <!-- UnitTest.Testconfig -->
+      <class name="UnitTest.Testexcel">
+        <test-method status="PASS" signature="testexcel()[pri:0, instance:UnitTest.Testexcel@ea639]" name="testexcel" duration-ms="453" started-at="2016-09-16T12:42:45Z" finished-at="2016-09-16T12:42:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testexcel -->
+      </class> <!-- UnitTest.Testexcel -->
+      <class name="UnitTest.TestBrowserfactory">
+        <test-method status="PASS" signature="testchrome()[pri:0, instance:UnitTest.TestBrowserfactory@1dfb72a]" name="testchrome" duration-ms="3059" started-at="2016-09-16T12:42:42Z" finished-at="2016-09-16T12:42:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testchrome -->
+        <test-method status="PASS" signature="testie()[pri:0, instance:UnitTest.TestBrowserfactory@1dfb72a]" name="testie" duration-ms="0" started-at="2016-09-16T12:42:45Z" finished-at="2016-09-16T12:42:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testie -->
+        <test-method status="PASS" signature="testfirefox()[pri:0, instance:UnitTest.TestBrowserfactory@1dfb72a]" name="testfirefox" duration-ms="0" started-at="2016-09-16T12:42:45Z" finished-at="2016-09-16T12:42:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testfirefox -->
+      </class> <!-- UnitTest.TestBrowserfactory -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

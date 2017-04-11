@@ -1,0 +1,16 @@
+package Factory;
+
+import DataProvider.Readconfig;
+
+public class Dataproviderfactory {
+
+	public static Readconfig configfile()
+	{
+		
+		
+	}
+	return config
+	
+	
+	
+}

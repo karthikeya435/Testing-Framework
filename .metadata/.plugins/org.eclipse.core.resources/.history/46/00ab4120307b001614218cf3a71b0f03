@@ -1,0 +1,17 @@
+package UnitTest;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import Factory.Dataproviderfactory;
+
+public class TestDatafactory {
+
+	@Test
+	public static void testdata()
+	{
+		String chrome_path=Dataproviderfactory.configfile().getchromepath();
+		Assert.assertEquals(chrome_path, "C:\\Driver\\IEDriverServer.exe");
+	}
+	
+}

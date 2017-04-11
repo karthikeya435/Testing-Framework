@@ -1,0 +1,13 @@
+package UnitTest;
+
+import org.testng.annotations.Test;
+
+public class TestDatafactory {
+
+	@Test
+	public static void testdata()
+	{
+		
+	}
+	
+}

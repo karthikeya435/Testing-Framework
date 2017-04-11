@@ -1,0 +1,13 @@
+package Factory;
+
+public class Dataproviderfactory {
+
+	public static Readconfig configfile()
+	{
+		
+	}
+	
+	
+	
+	
+}

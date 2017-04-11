@@ -1,0 +1,79 @@
+package PageObjects;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+import Factory.Browserfactory;
+import Factory.Dataproviderfactory;
+
+public class Homepage {
+	
+	
+	
+	@FindBy(how = How.XPATH , using="//*[@id='userId']") 
+	public WebElement Username;
+	
+	@FindBy(how = How.XPATH , using="//*[@id='password']") 
+	WebElement pwd;
+	
+	@FindBy(how = How.ID , using="btnSignIn") 
+	public WebElement submit;
+	
+	
+	public void enterusername()
+	{
+		Username.clear();
+		Username.sendKeys("chris.russo@infor.com");
+	}
+	
+	public void enterpwd()
+	{
+		pwd.clear();
+		pwd.sendKeys("Infor#2016");
+	}
+	public void btnsubmit()
+	{
+		submit.click();
+	}
+	public boolean testusername()
+	{
+		boolean d=Browserfactory.isEnabled(Username);
+		if(d==true)
+		{
+			return true;	
+		}
+		else
+		{
+			return false;
+		}
+	}
+	public boolean testpwd()
+	{
+		boolean d=Browserfactory.isEnabled(pwd);
+		if(d==true)
+		{
+			return true;	
+		}
+		else
+		{
+			return false;
+		}
+	}
+	public boolean Signin()
+	{
+		boolean d=Browserfactory.isEnabled(submit);
+		if(d==true)
+		{
+			return true;	
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	
+	
+	
+}
